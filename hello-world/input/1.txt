@@ -1,0 +1,13 @@
+# Comment
+
+
+# read the window size from whatever is rendering us, reactively.
+window = Read-window
+
+# define a rectangular zone called "main-zone". it fills up the entire window
+Zone window-zone = window
+
+# define a rectangular zone called "play". it's in the center of window-zone, with a padding of 10% on all 4 sides.
+Zone play = window padding 10%
+
+

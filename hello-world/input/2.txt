@@ -1,0 +1,15 @@
+# Rendering a parse tree.
+
+# Start with a root
+# Its children are rendered below it, joined using unicode characters
+# They can be clicked to expand/collapse.
+
+"""
+- root
+
++ root
+ |- * child
+ |- * child
+ ^- * last child
+"""
+
