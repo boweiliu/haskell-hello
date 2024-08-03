@@ -10,6 +10,7 @@
 + root
  |- * child
  |- * child
- ^- * last child
+ ^- * last child which is really
+      long and complicated and has lots of contents
 """
 

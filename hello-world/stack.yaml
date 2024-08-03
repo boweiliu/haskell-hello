@@ -40,7 +40,7 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
+extra-deps: [time-1.12]
 
 # Override default flag values for project packages and extra-deps
 # flags: {}
@@ -68,3 +68,4 @@ packages:
 
 ghc-options:
   "$everything": -optl-lm -optl-lpthread
+

@@ -20,6 +20,16 @@
   (major1) == 4 && (major2) <  18 || \
   (major1) == 4 && (major2) == 18 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
+/* package time-1.12 */
+#ifndef VERSION_time
+#define VERSION_time "1.12"
+#endif /* VERSION_time */
+#ifndef MIN_VERSION_time
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  12 || \
+  (major1) == 1 && (major2) == 12 && (minor) <= 0)
+#endif /* MIN_VERSION_time */
 
 /* tool gcc-11 */
 #ifndef TOOL_VERSION_gcc
@@ -113,7 +123,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hello-world-0.1.0.0-GtO6BROsgX8jsD5jUj08Z-hello-world"
+#define CURRENT_COMPONENT_ID "hello-world-0.1.0.0-76U8QXxVVLk7DP48HRQaVd-hello-world"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

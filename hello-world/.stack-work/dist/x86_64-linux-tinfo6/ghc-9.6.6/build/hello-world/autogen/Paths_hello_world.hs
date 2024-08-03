@@ -46,12 +46,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/bin"
-libdir     = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/lib/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0-GtO6BROsgX8jsD5jUj08Z-hello-world"
-dynlibdir  = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/lib/x86_64-linux-ghc-9.6.6"
-datadir    = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/share/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0"
-libexecdir = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/libexec/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0"
-sysconfdir = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/f42eb91928178e99e4262ca341e7ffc3cbc16e35039ea8b09ae98e7c675b7d9b/9.6.6/etc"
+bindir     = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/bin"
+libdir     = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/lib/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0-76U8QXxVVLk7DP48HRQaVd-hello-world"
+dynlibdir  = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/lib/x86_64-linux-ghc-9.6.6"
+datadir    = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/share/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0"
+libexecdir = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/libexec/x86_64-linux-ghc-9.6.6/hello-world-0.1.0.0"
+sysconfdir = "/home/bowei/code/haskell-hello/hello-world/.stack-work/install/x86_64-linux-tinfo6/2a50adc44d8e9f913283b53cad9c9a4cf6136a5822c6e18243b3ffdd631a746b/9.6.6/etc"
 
 getBinDir     = catchIO (getEnv "hello_world_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "hello_world_libdir")     (\_ -> return libdir)
