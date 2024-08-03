@@ -1,5 +1,6 @@
 import System.IO
-import Data.Time.Clock (getCurrentTime, diffUTCTime, DiffTime)
+import Data.Time.Clock (DiffTime, picosecondsToDiffTime)
+import Data.Time.Clock.System (getSystemTime, systemNanoseconds)
 
 -- module Main (main) where
 
@@ -12,15 +13,16 @@ fileName = "input/1.txt"
 main :: IO ()
 main = do
   handle <- openFile fileName ReadMode
-  processHandle handle
+  (_, elapsed) <- timeAction (processFileHandle handle)
+  putStrLn ("Elapsed: " ++ (show elapsed))
   hClose handle
   -- contents <- readFile fileName
   -- putStrLn contents
 
 
 
-processHandle :: Handle -> IO ()
-processHandle handle = do
+processFileHandle :: Handle -> IO ()
+processFileHandle handle = do
   -- Read the next line
   eof <- hIsEOF handle
   if eof
@@ -28,10 +30,17 @@ processHandle handle = do
       else do
           line <- hGetLine handle
           putStrLn line
-          processHandle handle
+          processFileHandle handle
 
 
 timeAction :: IO a -> IO (a, DiffTime)
 timeAction action = do
+  before <- getSystemTime
   result <- action
-  return (action, 0)
+  after <- getSystemTime
+  let diffNanos = systemNanoseconds after - systemNanoseconds before
+  let diffPicos :: Integer
+      diffPicos = fromIntegral (diffNanos * 1000)
+  return (result, picosecondsToDiffTime diffPicos)
+
+
